@@ -1,0 +1,524 @@
+/**
+ * @Author: Toke Raabjerg <nadgryzione>
+ * @Date:   24-Aug-2018
+ * @Email:  tokermc@hotmail.co
+ * @Project: Lectio Expert
+ * @Last modified by:
+ * @Last modified time: 2019-05-07T14:16:34+02:00
+ */
+
+
+
+iframe {
+  border:none!important;
+}
+
+/* --------------------------------------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------------------------------------- */
+
+.ls-master-pageheader {margin-top:25px;}
+
+.dropdown {
+    position: relative !important;
+    display: inline-block !important;
+    z-index: 5 !important;
+}
+
+.dropdown-content {
+    text-align:center!important;
+    display: none !important;
+    position: absolute !important;
+    top:-25px;
+    background-color: #f1f1f1 !important;
+    min-width: 160px !important;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2) !important;
+    z-index: 99999999 !important;
+}
+
+.dropdown-content a {
+    width:100%;
+    color: black;
+    padding: 12px 16px !important;
+    text-decoration: none !important;
+    display: block !important;
+}
+
+.dropdown-content a:hover {background-color: #ddd !important;}
+
+.dropdown:hover .dropdown-content {display: block !important;}
+
+#s_m_mastermenu {overflow:visible!important;}
+
+/* --------------------------------------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------------------------------------- */
+
+#LectioExpertTimeLine{
+	position:relative;
+	border-bottom:2px solid #900;
+	z-index:3;
+	opacity:.35;
+	width:0%;
+}
+
+div#footer
+      {
+        position:fixed;
+            right: 10px;
+            bottom:10px;
+        z-index:2;
+      }
+
+
+div#support, div#copyright
+      {
+        height:40px;
+        width:40px;
+        margin:10px;
+        border-radius:1000px;
+
+        transition:1s;
+        text-align:center;  font-size:200%;
+        background:#242424; color:white;
+      }
+
+
+div#support
+      {
+        position:fixed;
+            right:10px;
+            bottom:60px;
+        height:32px;
+        width:32px;
+        overflow:hidden; cursor:pointer;
+        border: 5px solid #242424;
+        background:white!important; color:#242424!important;
+      }
+      div#support:hover
+            {transition:.4s; bottom:65px!important;}
+      div#support > *
+            {overflow:hidden;}
+      i#supportIcon
+            {font-size: 150%;  line-height: 35px;}
+      div#support > div
+            {font-size:50%;}
+      div#supportContent
+            {height:inherit;}
+      h2#supportTitle
+            {line-height:0px; overflow:visible!important;}
+      iframe#supportIframe
+            {margin:3px;}
+      sub#supportSubTitle
+            {font-style:italic;}
+      hr#supportHR
+            {width:80%;}
+
+
+div#copyright
+      {
+        position:fixed;
+            right: 10px;
+            bottom:10px;
+        height:32px;
+        width:32px;
+        overflow:hidden; cursor:pointer;
+        border: 5px solid #242424;
+        background:white!important; color:#242424!important;
+      }
+      div#copyright:hover
+            {transition:.5s;  bottom:15px!important;}
+      div#copyright > a
+            {font-weight:550;line-height:0;}
+      div#copyright > a:hover {text-decoration:none!important;}
+
+div#supportBackground
+      {
+        z-index:1;
+      }
+
+.lx_checkbox {
+  display: inline;
+  position: relative;
+  padding-left: 35px;
+  /* margin-bottom: 12px; */
+  cursor: pointer;
+  font-size: 15px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.lx_checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.lxcustomCheckbox {
+  position: absolute;
+  top: -13px;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #eee;
+  border: 1px solid #c8c8c8;
+  transform:translate(50%,50%);
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.lxcustomCheckbox:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* On mouse-over, add a grey background color */
+.lx_checkbox:hover input ~ .lxcustomCheckbox {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.lx_checkbox input:checked ~ .lxcustomCheckbox {
+  background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.lxcustomCheckbox:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.lx_checkbox input:checked ~ .lxcustomCheckbox:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.lx_checkbox .lxcustomCheckbox:after {
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  cursor:pointer;
+}
+
+
+/**//**//**//**//**//**/
+/**//**//**//**//**//**/
+/*      homework      */
+/**//**//**//**//**//**/
+/**//**//**//**//**//**/
+
+.container-checkbox {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container-checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.customCheckbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #eee;
+  border: 1px solid #c8c8c8;
+  transform:translate(50%,50%);
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.customCheckbox:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* On mouse-over, add a grey background color */
+.container-checkbox:hover input ~ .customCheckbox {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container-checkbox input:checked ~ .customCheckbox {
+  background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.customCheckbox:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container-checkbox input:checked ~ .customCheckbox:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container-checkbox .customCheckbox:after {
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  cursor:pointer;
+}
+
+#multiAbsence-button {
+  width: 180px;
+  padding: 5px;
+  text-align: center;
+  background-color: #d6d9da;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom:20px;
+}
+
+#absenceChart {
+  width:100%;
+  display:inline-block;
+}
+
+#absenceChart-period {display:inline-block;} #absenceChart-year {float:right;}
+
+.contextmenuCustom {
+  height:20px;
+  border-bottom: 1px solid #d6d9da;
+  color:#444!important;
+}
+.lec-context-menu[style] {min-width:250px;}
+.contextmenuCustom:hover {background:#eeecec!important; text-decoration:none!important;}
+.contextmenuCustom:last-child {border:none !important;}
+.contextmenuCustom i {width:25px;}
+a#contextDownloads {
+  margin-left:20px;
+  max-width:190px;
+}
+
+
+.floatLeft div.button.snow i {
+  line-height:20px;
+  background:none !important;
+  font-size:150%;
+}
+.floatLeft div.button.snow {border-bottom: 3px solid red !important; height:27px;}
+.floatLeft div.button.snow a:hover {
+  border-color:#a2001e !important;
+  background:none !important;
+  font-size:115%;
+}
+
+.TreeNode-icon i {
+  color:#475968;
+  font-size:110%;
+}
+.s2skemabrikInnerContainer .TreeNode-icon i,
+#s_m_Content_Content_SkemaNyMedNavigation_mobilskemaLnk .TreeNode-icon i
+ {
+   font-size:90%;
+   margin:2px;
+ }
+.s2skemabrikInnerContainer .TreeNode-icon i {color:#444;}
+#s_m_Content_Content_SkemaNyMedNavigation_newPA .TreeNode-icon i {font-size:90%;}
+#s_m_Content_Content_DocumentGridView_ctl00 tr .noWrap:first-child i {margin-right:10px; font-size:120%;}
+
+
+.TreeNode-icon.teacher i {color:#9dbe43;}
+.TreeNode-icon.student i {color:#e59946;}
+.TreeNode-icon.group i {color:#5889c2}
+.TreeNode-icon.delete i {color: #cd2929;}
+.TreeNode-icon.iconTrash {color:#327634;}
+/* .TreeNode-icon.iconNote i {color: #fcefaf;} */
+.TreeNode-icon.iconFlag i {color:#d65959;}
+.TreeNode-icon.question i {font-size:100%; margin-top:-6px;}
+
+.far.fa-file-word {color:#2a5897;}
+.far.fa-file-excel {color: #007948;}
+.far.fa-file-powerpoint {color:#aa5037;}
+#s_m_outerContentFrameDiv i:hover {text-decoration:none!important;}
+
+#shuffleStudents , #pickStudent, #generateGroup {
+  position:relative;
+  text-align:center;
+  padding:5px;
+  margin:5px;
+  background:#dfe3e7;
+  border-radius:15px;
+  user-select:none;
+}
+
+
+
+[draggable] {
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  /* Required to make elements draggable in old WebKit */
+  -khtml-user-drag: element;
+  -webkit-user-drag: element;
+}
+
+#columnsUl {
+  list-style-type: none;
+}
+
+.columnLi {
+  width: 400px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  text-align: center;
+  cursor: move;
+}
+.columnLi header {
+  width:400px;
+  color: black;
+  background-color: #ccc;
+  padding: 5px;
+  border-bottom: 1px solid #ddd;
+  border-radius: 10px;
+  border: 2px solid #666666;
+}
+
+.columnLi.dragElem {
+  opacity: 0.4;
+}
+.columnLi.over {
+  //border: 2px dashed #000;
+  border-top: 2px solid blue;
+}
+
+div#rdataisbeautiful
+{
+  cursor:pointer;
+  color:#444;
+  font-size:110%;
+  margin-left:50px;
+}
+
+table#chart_container_header td
+{
+  height:40px;
+  background:#efefef;
+}
+table#chart_container_header td span.description
+{
+  margin:10px;
+  font-weight:600;
+}
+table#chart_container_header td input
+{
+  height:20px;
+  width:50px;
+}
+table#chart_container_header td div#submitChart,
+table#chart_container_header td div#submitCompare
+{
+  user-select:none;
+  margin:10px;  margin-left:20px;margin-right:20px;
+  font-weight:600;
+  background:#444; color:#efefef;
+  border-radius:15px;
+  height: 20px;
+  width: 40px;
+  text-align: center;
+  cursor:pointer;
+}
+table#chart_container_header td div#submitChart:hover
+{  background:#bbb7b7; color:#5d5b5b;}
+table#chart_container_header select
+{
+    text-align:center;
+}
+
+.lectioTR td {
+  background:#efefef;
+  border:none;
+  color:#444;
+  text-align:center;
+}
+
+.lxModal
+{
+  position: fixed;
+    top: 25vh;
+    left: 25vw;
+  width:50vw;
+  height:50vh;
+  margin:auto;
+  z-index:999;
+  background:#efefef;
+  opacity:.9;
+}
+.lxModal div {width:50%;margin:auto;text-align:center;}
+.lxModal img#iconModal
+{
+  position: absolute;
+    left: 15px;
+    top: 15px;
+}
+.lxModal #closeModal {
+  position: absolute;
+    right: 15px;
+    top: 15px;
+  cursor:pointer;
+}
+
+.lxModalBG
+{
+  position: fixed;
+    top: 0;
+    left: 0;
+  width:100vw;
+  height:100vh;
+  margin:auto;
+  z-index:998;
+}
+#lxExamInfo #closeModal:hover {color:#323232 !important;}
+#lxExamInfo #closeModal {font-size:40px; color:#444 !important;}
+#lxExamInfo h1 {color:#444 !important; font-family:"verdana"; font-size:28px;}
+#lxExamInfo p {font-family:"Arial"; color:#121212 !important;}
+#lxExamInfo {height:400px;min-width:750px;}
+#lxExamInfo img#iconModal {height:64px;width:64px;}
+
+
+
+
+
+
+
+/**/

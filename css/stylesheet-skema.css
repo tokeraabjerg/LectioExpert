@@ -1,0 +1,141 @@
+/**
+ * @Author: Toke Raabjerg <nadgryzione>
+ * @Date:   18-May-2018
+ * @Email:  tokermc@hotmail.co
+ * @Project: Lectio Expert
+ * @Last modified by:   nadgryzione
+ * @Last modified time: 24-Mar-2019
+ */
+
+div.s2skemabrikcontent, .s2infoHeader *, .s2timeline{color:#444 !important;}
+
+div.s2skemabrikInnerContainer{background:#C5D2D6 !important; -webkit-transition:200ms ease-in-out, height 0ms;}
+div.s2skemabrikInnerContainer:hover{background:#B0C3C9 !important; text-decoration:none;}
+
+a.s2bgbox:hover{text-decoration:none !important;}
+
+a.s2changed div.s2skemabrikInnerContainer, .s2skemabrikcontent.small.s2changed{background:#BAF0BA !important;}
+a.s2changed div.s2skemabrikInnerContainer:hover, .s2skemabrikcontent.small.s2changed:hover{background:#A1EDA1 !important;}
+
+a.s2bgboxeksamen div.s2skemabrikInnerContainer{border-left: 4px solid #900;}
+
+a.classAbsence div.s2skemabrikInnerContainer{background:#A4A8A8 !important;}
+a.classAbsence div.s2skemabrikInnerContainer:hover{background:#8B9091 !important;}
+
+a.s2private div.s2skemabrikInnerContainer{background:#ECF0BA !important;}
+a.s2private div.s2skemabrikInnerContainer:hover{background:#E8EDA1 !important;}
+
+a.s2hide div.s2skemabrikInnerContainer{background:#E5E5E5 !important; opacity:0.3; -webkit-transform: translateZ(0);}
+a.s2hide div.s2skemabrikInnerContainer:hover{background:#E5E5E5 !important; opacity:1.0;}
+a.s2hide div.s2skemabrikcontent{color:#999 !important;}
+a.s2hide:hover div.s2skemabrikcontent{color:#444 !important;}
+
+a.s2cancelled div.s2skemabrikInnerContainer, .s2skemabrikcontent.small.s2cancelled{background:#DDBABA !important;}
+a.s2cancelled div.s2skemabrikInnerContainer:hover, .s2skemabrikcontent.small.s2cancelled:hover{background:#D2A1A1 !important;}
+
+a.s2skemabrik.s2bgbox.expanded{
+	height:auto !important;
+	z-index:2;
+}
+a.s2bgbox, div.s2bgbox
+{
+	border-top:1px solid #ddd;
+	border-bottom:1px solid #ddd;
+}
+.s2eksamen{
+	width: 2px;
+	background: #900;
+	height: 100%;
+	margin-right: 2px;
+	float: left;
+}
+.s2skemabrikIcons{
+	margin-top:0px;
+	margin-right:0px;
+	padding:2px;
+	padding-bottom: 0px;
+}
+.s2skemabrikIcons img{
+	margin-left: 2px;
+}
+a.s2bgbox, div.s2bgbox{
+	border:none;
+	margin-top:1px;
+	margin-bottom:2px;
+	z-index: 2;
+}
+
+.s2module-bg{
+	background-color: #F8F8F8;
+	border-top: solid 1px #BBB;
+	border-bottom: solid 1px #BBB;
+}
+.s2module-bg.s2time-off {
+	background-color:#E6E6E6;
+}
+.s2withlink:hover{
+	background:none !important;
+}
+.s2skemabrikInnerContainer>.s2timeline{
+	text-decoration:underline;
+	padding: 0.15em;
+}
+.s2seperator{
+	background:none !important;
+	margin-left:3px !important;
+	margin-right:3px !important;
+	width:auto !important;
+	height:auto !important;
+	line-height:14px !important;
+}
+
+SPAN[lectiocontextcard]{
+	cursor:pointer !important;
+}
+
+.s2module-info{
+	text-align: center;
+	color: #666;
+}
+
+.s2skema .s2infoHeader{
+	background-color: #F8F8F8;
+	background-image:none;
+	border-top:none;
+	border-bottom:none;
+}
+.s2skema td, .s2skema th{
+	border:solid 1px #BBB;
+}
+.s2skema, .s2skemabrikcontainer{
+	background: #DDD;
+	background-image:none;
+}
+
+.s2dayHeader td{
+	background-color: #F8F8F8;
+	color: #666;
+	font-weight:normal;
+	font-size: 12px;
+}
+
+a.s2skemabrik.s2bgbox.highlight + .lessonPulse{
+	z-index: 50;
+	pointer-events:none;
+	-webkit-user-select:none;
+
+	-webkit-box-shadow:0px 0px 4px 1px #788FB1, inset 0px 0px 4px 0px #788FB1;
+	-webkit-animation:highlight 1.5s;
+	-webkit-animation-iteration-count:3;
+}
+
+
+@-webkit-keyframes highlight{
+	0%   {-webkit-transform: scale(1);}
+	50% {-webkit-transform: scale(1.1, 1.15);}
+	100% {-webkit-transform: scale(1);}
+}
+
+
+#s_m_Content_Content_skemaIsland_pa .s2skemabrikcontent.s2changed, #s_m_Content_Content_skemaIsland_pa .s2skemabrikcontent.s2changed {background-color:#BAF0BA!important;color:#444!important;}
+#s_m_Content_Content_skemaIsland_pa .s2skemabrikcontent.s2cancelled, #s_m_Content_Content_skemaIsland_pa .s2skemabrikcontent.s2cancelled {background-color:#DDBABA!important;color:#444!important;}

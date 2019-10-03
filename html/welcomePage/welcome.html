@@ -1,0 +1,142 @@
+<!--
+@Author: Toke Raabjerg <nadgryzione>
+@Date:   11-Oct-2018
+@Email:  tokermc@hotmail.com
+@Project: Lectio Expert
+@Last modified by: Ghaith Al-Maliki
+@Last modified time: 1-Dec-2018
+-->
+
+<html>
+<head> <meta charset="utf-8">
+    <style id="injectable"></style>
+    <style id="LectioCSS">
+      div#footer
+            {
+              position:fixed;
+                  right: 10px;
+                  bottom:10px;
+              z-index:2;
+            }
+
+
+      div#support, div#copyright
+            {
+              margin:10px;
+              border-radius:1000px;
+
+              transition:1s;
+              text-align:center;  font-size:200%;
+              background:#242424; color:white;
+            }
+
+
+      div#support
+            {
+              position:fixed;
+                  right:10px;
+                  bottom:60px;
+              height:32px !important;
+              width:32px !important;
+              overflow:hidden; cursor:pointer;
+              border: 5px solid #242424;
+              background:white!important; color:#242424!important;
+            }
+            div#support:hover
+                  {transition:.4s; bottom:65px!important;}
+            div#support > *
+                  {overflow:hidden;}
+            i#supportIcon
+                  {font-size: 150%;  line-height: 35px;}
+            div#support > div
+                  {font-size:50%;}
+            div#supportContent
+                  {height:inherit;}
+            h2#supportTitle
+                  {line-height:0px; overflow:visible!important;}
+            iframe#supportIframe
+                  {margin:3px;}
+            sub#supportSubTitle
+                  {font-style:italic;}
+            hr#supportHR
+                  {width:80%;}
+
+
+      div#copyright
+            {
+              position:fixed;
+                  right: 10px;
+                  bottom:10px;
+              height:32px !important;
+              width:32px !important;
+              overflow:hidden; cursor:pointer;
+              border: 5px solid #242424;
+              background:white!important; color:#242424!important;
+            }
+            div#copyright:hover
+                  {transition:.5s;  bottom:15px!important;}
+            div#copyright > a
+                  {font-weight:550;line-height:1;text-decoration:none!important;font-size:120%;}
+            div#copyright > a:hover {text-decoration:none!important;}
+
+      div#supportBackground
+            {
+              z-index:1;
+            }
+    </style>
+    <link rel="stylesheet" type="text/css" href="../../css/welcomePage/stylesheet-welcome.css">
+    <script type="text/javascript" src="../../js/welcomePage/welcome.js"></script>
+    <script type="text/javascript" src="../../js/footer/footer.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <title>Lectio Expert</title>
+</head>
+<body>
+  <div id="centerContent">
+    <img style="margin:10px;" src="../../icons/icon128.png"></img>
+    <div id="titleContent"><h1>Velkommen til!</h1></div>
+    <div id="mainContent">
+      <div id="description">
+          Her kan du begynde at sætte dine Lectio indstillinger op!
+        <br><br>
+        Start med at udfylde dine login oplysninger så de bliver gemt til Auto-Login!
+        <div id="dataOpbevaring"><i>Læs om dataopbevaring.</i>
+          <div class="dataOpbevaring"><div style="margin:5px;">
+            Disse oplysninger er kun <b>gemt og krypteret på din computer</b>,
+            og er på intet tidspunkt i andres hænder.
+            Du kan læse mere om dette <a style="color:white;" href="http://lectioexpert.000webhostapp.com/html/terms.html" target="_blank">her</a>
+          </div></div>
+        </div>
+      </div>
+      <div id="content">
+        <form>
+          <input id="brugernavn" type="text" placeholder="Brugernavn"></input>
+
+          <input id="adgangskode" type="password" placeholder="Adgangskode"></input>
+        </form>
+      </div>
+      <div></div>
+      <button class="button save" id="buttonSave">Næste</button>
+      <br>
+      <button class="button skip" id="buttonSkip"><i>Sprig dette skridt over</i></button>
+    </div>
+    <div style="height:10px">  </div>
+  </div>
+  <!-- <div id="footer">
+    <div id="support"><i class="fas fa-question"></i>
+      <div id="supportPopup">Har du brug for hjælp? Så står vi til assistance lige
+        <span id="supportIframe"> her!<br><iframe id="iframe" src="https://docs.google.com/forms/d/e/1FAIpQLSf09LyWwIdxxAKFht_6cmAX-40UzZOgQiVHTIQhz9hG736Ydg/viewform?embedded=true" width="250" height="310" frameborder="0" marginheight="0" marginwidth="0">Indlæser...</iframe></iframe></span>
+        <div id="bottomSection">
+          Du kan også skrive per e-mail:
+          lectioexpert@gmail.com
+          <br>
+          Vi vil forsøge at svare så hurtigt som overhovedet muligt
+        </div>
+      </div>
+
+    </div>
+
+
+    <a href="https://lectioexpert.000webhostapp.com/betingelser.html" target="_blank"><div id="copyright"><i class="fas fa-copyright"></i></div></a>
+  </div> -->
+</body>
+</html>

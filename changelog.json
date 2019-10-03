@@ -1,0 +1,227 @@
+{
+  "updates": [
+    {
+      "version":"2.8.2",
+      "changelog": [
+        "<li> - Skema timeline offset fix. </li><br>"
+      ]
+    },
+    {
+      "version":"2.8.1",
+      "changelog": [
+        "<li> - Fix til checkboxes, Lectio/MaCom har åbentbart forsøgt at gøre en enkelt ting pæn på Lectio, og dermed ødelagt det. Nu er der moderne checkboxes i stedet for nogle fra det sidste århundrede. Selv tak. </li><br>"
+      ]
+    },
+    {
+      "version":"2.8.0",
+      "changelog": [
+        "<li> - Fix til hvid baggrund på præsentations siden ved brug af mørkt tema. </li><br>"
+      ]
+    },
+    {
+      "version":"2.7.9 beta",
+      "changelog": [
+        "<li> - Troll feature - 'gimig12-03' på karakterer siden. </li><br>",
+        "<li> - Tilføjet eksamensfunktion som slår udgående requests fra. (fx. solnedgang/solopgang)</li><br>",
+        "<li> - + 'Brug kun egen baggrund om dagen'</li><br>",
+        "<li> - Eksaminer er nu røde på skemaet. </li><br>"
+      ]
+    },
+    {
+      "version":"2.7.8 beta",
+      "changelog": [
+        "<li> - Fixet fejl ved Google Analytics. </li><br>"
+      ]
+    },
+    {
+      "version":"2.7.7 beta",
+      "changelog": [
+        "<li> - 'Login uden auto login' knap. </li><br>",
+        "<li> - Fixet fejl på skemaet for timer overlapper hinanden. </li><br>",
+        "<li> - Ny landingsside når man installerer. </li><br>",
+        "<li> - 'Tidslinje' på skemaet.</li><br>",
+        "<li> - Forbedring af Google Analytics."
+      ]
+    },
+    {
+      "version":"2.7.6 beta",
+      "changelog": [
+        "<li> - Små fixes i relation til 2.7.5. </li><br>",
+        "<li> - Timer med fravær bliver nu grå på skemaet. </li><br>",
+        "<li> - Andre små store mikro ubetydelige ændringer. </li><br>",
+        "<li> - Er der overhovedet nogen der læser det her? </li><br>"
+      ]
+    },
+    {
+      "version":"2.7.5 beta",
+      "changelog": [
+        "<li> - Redesign af popup-vinduet. </li><br>",
+        "<li> - Karaktergennemsnittet tager nu også højde for 5 A fag. </li><br>",
+        "<li> - Fixet at tooltip blinker når man tager musen over det på fravær cirkeldiagrammet. </li><br>",
+        "<li> - En virkelig unødvendig statistik over timer. Klik på 'r/dataisbeautiful' på skemaet... </li><br>",
+        "<li> - Mere statistik under fravær. Klik på fraværsårsager og se total fraværstimer, % godskrevet og % ikke godskrevet. </li><br>",
+        "<li> - Også under fravær forsiden, du kan nu ses dit totale fravær inklusiv godskrevet fravær. </li><br>"
+      ]
+    },
+    {
+      "version":"2.7.4 beta",
+      "changelog": [
+        "<li> - Fixet karakter gennemsnit, det er nu vægtet gennemsnit. </li><br>",
+        "<li> - Højre klik på skemaet for at hurtigt tilgå ting som lærerens skema og filer på timen. </li><br>",
+        "<li> - En masse andre ting som jeg ikke kan huske fordi jeg ikke har skrevet det ned, jeg burde have mere orden. </li><br>"
+      ]
+    },
+    {
+      "version":"2.7.3 beta",
+      "changelog": [
+        "<li> - Tilføjet mulighed for personlig baggrund. </li><br>",
+        "<li> - <a href='https://lectioexpert.000webhostapp.com/'>Ny præsentabel hjemmeside!</a> </li><br>",
+        "<li> - Små forbedringer. </li><br>"
+      ]
+    },
+    {
+      "version":"2.7.2 beta",
+      "changelog": [
+        "<li> - Hotfix pga. dilemma med Chrome Webstore Politikker. </li><br>"
+      ]
+    },
+    {
+      "version":"2.7.1 beta",
+      "changelog": [
+        "<li> - Afkrydsning til lektier. </li><br>",
+        "<li> - Nye ikoner.</li><br>"
+      ]
+    },
+    {
+      "version":"2.7.0 beta",
+      "changelog": [
+        "<li> - Tilføjet ting til d. 1 Dec. <b><u>(Psst. du kan slå det fra)</u></b>.</li><br>",
+        "<li> - Tilføjet grafisk oversigt til fravær.</li><br>",
+        "<li> - Tilføjet 'søg' på skoleliste.</li><br>",
+        "<li> - <b>Tilføjet multi-fraværsårsag.</b> Vær opmærksom på fejl, husk du kan bruge spørgsmålstegnet i højre hjørne for, at rapportere fejl!</li><br>",
+        "<li> - Påbegyndt udarbejdelse af Safari Extension... <a href='https://lectioexpert.000webhostapp.com/html/safari.html' target='_blank'>Læs mere her.</a></li><br>",
+        "<li> - Tilføjet en lille troll feature til, at aflyse alle timer. Udtryk dine følelser og skriv 'jeg orker ikke mere' på skemaet, eller blot lav en '*'.</li><br>",
+        "<li> - Forbedringer, forbedringer, forbedringer og lidt flere forbedringer.</li><br>"
+      ]
+    },
+    {
+      "version":"2.6.9 beta",
+      "changelog": [
+        "<li> - Ændringer i <a href='https://lectioexpert.000webhostapp.com/html/terms.html' target='_blank'>privatlivspolitik samt vilkår.</a></li><br>",
+        "<li> - Forbedringer i mange forskellige scripts.</li><br>",
+        "<li> - Andre mindre rettelser.</li><br>"
+      ]
+    },
+    {
+      "version":"2.6.7 beta",
+      "changelog": [
+        "<li> - Forbedringer på krypteringen af login informationer, det er nu endnu bedre beskyttet. <b><u>Du vil være nødt til at udfylde dine login informationer igen.</u></b> </li><br>",
+        "<li> - Skema i popup vinduet. </li><br>",
+        "<li> - Redesign af popup vinduet. </li><br>",
+        "<li> - Nat tema efter solnedgang rent faktisk sat til efter solnedgang. (Ikke blot klokken 20) </li></br>",
+        "<li> - Fixet hints intervallet, der manglede et nul... Nu er det hver dag i stedet for hver 2. time... </li><br>",
+        "<li> - Tilføjet flere muligheder under indstillinger. </li><br>",
+        "<li> - Mange andre forbedringer. </li><br>"
+      ]
+    },
+    {
+      "version":"2.6.6 beta",
+      "changelog": [
+        "<li> - Tilføjet hjælp og copyright knappen. </li><br>",
+        "<li> - AutoLogin forbedringer. </li><br>",
+        "<li> - En masse forbedringer på temaet. </li><br>",
+        "<li> - En masse andre nye funktioner/rettelser. </li><br>"
+      ]
+    },
+    {
+      "version":"2.5 beta",
+      "changelog": [
+        "<li> - Tilføjet snake, skriv 'snake' for at åbne snake, og '2048' for at åbne 2048! </li><br>",
+        "<li> - Forbedringer på det simple tema </li><br>",
+        "<li> - Andre små forbedringer </li><br>"
+      ]
+    },
+    {
+      "version":"2.4 beta",
+      "changelog": [
+        "<li> - Tilføjet muligheden for at vælge et nyt simpelt tema </li><br>",
+        "<li> - Forbedret sikkerheden, nu bliver dit brugernavn og din adgangskode krypteret i Base64! </li><br>",
+        "<li> - Forbedring af visse scripts </li><br>"
+      ]
+    },
+    {
+      "version":"2.3 beta",
+      "changelog": [
+        "<li> - Tilføjet muligheden for at selv vælge farve til tema </li><br>",
+        "<li> - Forbedring af visse scripts </li><br>"
+      ]
+    },
+    {
+      "version":"2.2 beta",
+      "changelog": [
+        "<li> - Tilføjet mulighed for, at slå tema fra </li><br>",
+        "<li> - Forbedret visse scripts </li><br>"
+      ]
+    },
+    {
+      "version":"2.1 beta",
+      "changelog": [
+        "<li> - Fixet fejl ved hovedmenu+ </li><br>"
+      ]
+    },
+    {
+      "version":"2.0 beta",
+      "changelog": [
+        "<li> - Tilføjet tonvis af nye funktioner (karakter gennemsnit, opgave nedtælling, hovedmenu+...) </li><br>",
+        "<li> - Muligheden for at slå ovenstående funktioner fra. </li><br>",
+        "<li> - Forbedringer af forskellige scripts. </li><br>"
+      ]
+    },
+    {
+      "version":"2018.28.08",
+      "changelog": [
+        "<li> - Fixet minimale fejl tema (Vinduets størrelse) </li><br>"
+      ]
+    },
+    {
+      "version":"2018.27.08",
+      "changelog": [
+        "<li> - Ny <a id='link' href='https://lectioexpert.000webhostapp.com/' target='_blank'>hjemmeside!</a> </li><br>",
+        "<li> - Forbedringer på Lectio temaet. </li><br>",
+        "<li> - Forbedringer på popup vinduet. </li><br>",
+        "<li> - Forbedringer på Auto-Login, gem knappen er fjernet, og den gemmer nu automatisk. </li></br>",
+        "<li> - Tilføjet 'Mere' knappen. </li><br>",
+        "<li> - Ændringer i Vilkår & betingelser. </li><br>"
+      ]
+    },
+    {
+      "version":"2018.21.08",
+      "changelog": [
+        "<li> - Tilføjet 'Hjælp' fanen. </li><br>",
+        "<li> - Forbedringer på det mørke tema samt normale tema. </li><br>",
+        "<li> - Ændringer i Vilkår & betingelser. </li><br>"
+      ]
+    },
+    {
+      "version":"2018.20.08",
+      "changelog": [
+        "<li> - Nyt moderne mørkt tema, og dermed muligheder for at vælge tema. (Kig under 'Tema') </li><br>",
+        "<li> - Forbedringer på Auto-Login funktionen, burde være fuldt funktionel. </li><br>",
+        "<li> - Forbedringer på popup vinduet. </li><br>",
+        "<li> - Forbedringer på Auto-Login, gem knappen er fjernet, og den gemmer nu automatisk. </li></br>",
+        "<li> - Tilføjet 'Mere' knappen. </li><br>",
+        "<li> - Ændringer i Vilkår & betingelser. </li><br>"
+      ]
+    },
+    {
+      "version":"2018.17.08.2",
+      "changelog": [
+        "<li> - Nye forbedringer på temaet! </li><br>",
+        "<li> - Eksperimentale ændringer på Auto-Login funktionen </li><br>",
+        "<li> - Tilføjet spillet 2048 som en gemt funktion, led efter 'Spil' </li><br>",
+        "<li> - Tilføjet 'Vilkår og betingelser' </li></br>",
+        "<li> - Nye tweaks på designet til popup vinduet! </li><br>"
+      ]
+    }
+  ]
+}

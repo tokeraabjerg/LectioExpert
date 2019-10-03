@@ -1,0 +1,143 @@
+/**
+ * @Author: Toke Raabjerg <nadgryzione>
+ * @Date:   11-Oct-2018
+ * @Email:  tokermc@hotmail.com
+ * @Project: Lectio Expert
+ * @Last modified by:
+ * @Last modified time: 2019-01-06T05:36:07+01:00
+ */
+
+* {font-family:"arial";}
+#titleContent * {font-family:"Times New Roman";}
+::placeholder:hover {
+  color:black!important;
+}
+
+div#description, div#titleContent {
+  cursor:default;
+}
+
+#centerContent {
+  font-size: 120% !important;
+}
+
+#themeIMG {
+  transition:0.5s;
+  height:153;
+  width:288;
+  margin:5px;
+}
+
+#content {
+  transition: visibility 0.5s, opacity 0.5s linear;
+}
+label {
+  cursor:pointer;
+}
+label:hover {
+  background:gray;
+}
+
+ #centerContent {
+   transition:0.5s;
+   position:relative;
+   top:15%;
+   background-color:#60606095;
+   color:white;
+   margin:auto;
+   width:300px;
+   max-height:700px;
+   overflow:hidden;
+   text-align:center;
+   border-radius:8px;
+ }
+ #mainContent {
+   margin:8px;
+   /* margin-top:-20px !important; */
+ }
+ #titleContent {
+   line-height:0px;
+ }
+ button.button {
+   margin:2px;
+   padding:8px;
+   border-radius:15px;
+   background:none;
+   border:1px solid #3f3f3f;
+   font-size:90%;
+   cursor:pointer;
+ }
+ button.save {
+   width:180px;
+   background-color:#3b6e2e;
+   color:white;
+ }
+ button.save:hover {
+   background-color:#387929!important;
+ }
+ button.skip {
+   width:150px;
+   font-size:70% !important;
+   margin-bottom:10px!important;
+ }
+ button.skip:hover {
+   background-color:#80808050!important;
+   color:white!important;
+ }
+ button:focus {
+   outline:none;
+ }
+ body {
+   background-color: #FEE140;
+   background-image: linear-gradient(90deg, #FEE140 0%, #FA709A 100%);
+ }
+ input#brugernavn, input#adgangskode {
+   width:200px;
+   height:25px;
+   border:none;
+   border-radius:5px;
+   text-align:center;
+   margin:6px;
+   background:#3f3f3f;
+   color:white;
+ }
+ input:focus {
+   border:none;
+   outline:none;
+ }
+ input:focus ::placeholder {
+   display:none;
+ }
+ ::placeholder {
+  color:lightgray;
+  font-style:italic;
+  opacity: 1; transition: opacity .5s;
+ }
+ *:focus::placeholder {
+   opacity: 0;
+ }
+ #dataOpbevaring {
+   font-size:90%;
+   text-decoration: underline;
+ }
+ #dataOpbevaring:hover div.dataOpbevaring {
+   max-height:200px;
+   z-index:1;
+   overflow-y:hidden;
+   overflow-x:hidden;
+ }
+ div.dataOpbevaring {
+   max-height:0px;
+   background-color:#242424;
+   width:150px;
+   position:absolute;
+   left:100px;
+   border-radius:5px;
+   z-index:-1;
+   transition:0.5s;
+   overflow:hidden;
+ }
+
+ div#dataOpbevaring {
+   cursor:pointer;
+ }

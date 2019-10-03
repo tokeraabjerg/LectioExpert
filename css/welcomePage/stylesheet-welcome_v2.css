@@ -1,0 +1,249 @@
+/**
+ * @Date:   2019-03-06T18:47:49+01:00
+ * @Last modified time: 2019-03-07T17:06:36+01:00
+ */
+body {overflow:hidden;background:#f6f6f6}
+
+header, .headerContainer {
+  width:15vw;
+  height:98vh;
+  min-width:200px;
+  z-index:2;
+}
+.headerContainer {
+  position:relative;
+  background:#ddd;
+}
+
+header div.headerTitle {
+  width:99%;
+  text-align:center;
+  margin:auto;
+
+}
+header img
+{
+  width:50%;
+  height:auto;
+  margin-top:20px;
+  margin-bottom:20px;
+  /* height:128px; */
+  /* width:128px; */
+}
+
+header .headerContent {text-align:center;}
+
+header a.button
+{
+  font-weight:400;
+  line-height:50px;
+  /* margin-left:15%;
+  margin-right:15%; */
+  text-decoration:none;
+  color:#444;
+  font-size:150%;
+}
+header a.button:hover {font-weight:600;}
+header a.button:first-child {font-weight:600;}
+header a.button[data-unlocked="false"] {color:#999;font-weight:300;}
+
+header div.headerFooter
+{
+  text-align:center;
+  position: absolute;
+  bottom: 0px;
+  margin-bottom:10px;
+  width:100%;
+}
+
+div.page
+{
+  background:#f6f6f6;
+  width:85vw;
+  min-width:700px;
+  height:98vw;
+  margin-left: 15vw;
+  padding: 0px 10px;
+  position: absolute;
+  top: 0;
+}
+
+div.page #pageTitle {
+  font-family:"arial";
+  font-weight:600;
+  color:#444;
+  font-size:250%;
+  margin-top:5vh;
+}
+div.page #pageDescription {
+  margin:auto;
+  font-family:"arial";
+  color:#444;
+  font-size:125%;
+  max-width:50%;
+}
+
+#nextPage
+{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  padding:10;
+  background:#888888b8;
+  text-align:center;
+  border-radius:18px;
+  font-size:150%;
+  font-weight:500;
+  color:#efefef;
+  cursor:pointer;
+  user-select:none;
+  z-index:3;
+}
+#previousPage
+{
+  position:fixed;
+  bottom:20px;
+  left:16vw;
+  padding:10;
+  background:#888888b8;
+  text-align:center;
+  border-radius:18px;
+  font-size:150%;
+  font-weight:500;
+  color:#efefef;
+  cursor:pointer;
+  user-select:none;
+  z-index:3;
+}
+
+#welcome img
+{
+  display:block;
+  margin:auto;
+  width:60%;
+  height:auto;
+}
+
+#settings div#settingContent
+{
+  font-size:100%;
+  width:40%;
+  margin:auto;
+  min-width:420px;
+}
+div#settingContent div#settingsLogin
+{
+  width:48%;
+  display:inline-block;
+  float:left;
+  min-width:200px;
+}
+div#settingContent div#settingsThemes
+{
+  width:48%;
+  display:inline-block;
+  float:right;
+  min-width:200px;
+}
+div#settingsLogin input
+{
+  font-size:105%;
+}
+
+/* #settings div#settingContent tr
+{
+  display:block;
+  margin:auto;
+  width:99%;
+} */
+
+
+
+.center {text-align:center;}
+.floatLeft {float:left;}
+.floatRight {float:right;}
+
+
+#autoLoginAdgang *, #autoLoginBruger *, #pinCodeTR *
+{
+  text-align:center;
+}
+input#brugernavn, input#adgangskode, input#pinCode
+{
+  display:block;
+  margin:auto;
+}
+::placeholder {transition: opacity 1s;}
+::placeholder:focus {
+  opacity:0;
+}
+
+.description {
+  text-align:left;
+  width:100%;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 45px;
+  height: 25.5px;
+  float:right;
+}
+.switch, #jscolor, #zoomLevel {
+  margin-right:20px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 19.5px;
+  width: 19.5px;
+  left: 4px;
+  bottom: 3px;
+  background-color: white;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(19px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+label.switch:hover {background:none!important;}
+
+:focus {
+  outline:none!important;
+}

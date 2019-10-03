@@ -1,0 +1,208 @@
+/**
+ * @Author: Toke Raabjerg <TokeDK>
+ * @Date:   22-May-2018
+ * @Email:  tokermc@hotmail.co
+ * @Project: Lectio Expert
+ * @Last modified by:
+ * @Last modified time: 2019-01-24T20:14:20+01:00
+ */
+
+
+
+/*
+Title: style.css
+Description: Primary style.css for www.lectio.dk
+Author: Toke Raabjerg
+*/
+/*----------------------  Lectio   ----------------------*/
+
+body {
+  font-size: 90% !important;
+}
+
+@media screen and (max-width: 1200px) {
+  .ls-master-header-institution {
+    display: none !important;
+  }
+}
+/*Master overskrift*/
+  .ls-master-pageheader {
+  text-align: center;
+  position: relative;
+  left: 110px;
+  float:left;
+  margin-top:25px;
+  }
+    .lectioToolbar, .lectioBorderTop .lectioBorderBot, .lectioToolbar .button A:not(.dropbtn.button), .lectioToolbar .button A:hover {
+    background-color: transparent !important;
+    background-image: none !important;
+    color: #1b5c9e !important;
+    }
+    .floatRight {
+    position: relative;
+    left: 1px;
+    }
+    .ls-master-header {
+      padding: 0 !important;
+      height: 0 !important;
+    }
+
+    .ls-master-header-institution {
+        position: absolute;
+        right: 300px !important;
+        top: -3px; right: 350px;
+        width: 430px;
+        height: 20px;
+        background-image: none/*URL("chrome-extension://hdfpfilneelpdfahbkehkgjlbccijkkk/icons/blueIcon.png")*/ !important;
+    }
+
+
+    .lectioBorderRight {border-right: none !important}
+    .lectioToolbar {border: none !important}
+    .lectioBorderLeft {border-left: none !important}
+
+
+    .yearselect {
+      background-color: #006ea9 !important;
+      border: 1px solid white !important;
+      color: white !important;
+      font-size: 135% !important;
+    }
+
+
+    a#m_ForsideLink,
+    a#m_defaultaspxLink,
+    a#m_LoginOutLink, a#m_kontaktLink,
+    a#m_HelpLink, a#m_mastersearchbtn,
+    a#m_mastersearchbtn, a#s_m_ForsideLink,
+    a#s_m_defaultaspxLink, a#s_m_LoginOutLink,
+    a#s_m_kontaktLink, a#s_m_HelpLink,
+    a#s_m_mastersearchbtn,
+    a#m_Content_submitbtn2,
+    .s2weekHeader TD,
+    .activityHeader, TD.activityHeader,
+    .lectioTabContainer .lectioTabToolbar .button A,
+    BUTTON.button, INPUT.button,
+    .ls-button-disabled-hover, BUTTON.button, INPUT.button,
+    .ui-dialog .ui-dialog-buttonpane button
+      {
+      background-color: #006ea9 !important;
+      color: white !important;
+      border: 1px solid white !important;
+      border-radius: 4px !important;
+      cursor: pointer !important;
+      background-image: none !important;
+      transition-duration: 0.8s !important;
+    }
+	A.button, DIV.button A, SPAN.button A {
+	  background-color: #006ea9 !important;
+      color: white !important;
+      border: 1px solid white !important;
+      border-radius: 4px !important;
+      cursor: pointer !important;
+      background-image: none !important;
+      transition-duration: 0.8s !important;
+	}
+	A.button:hover, DIV.button A:hover, SPAN.button A:hover {
+	  background-color: #fff !important;
+      color: black !important;
+      border: 1px solid #006ea9 !important;
+	}
+
+    a#m_ForsideLink:hover,
+    a#m_defaultaspxLink:hover,
+    a#m_LoginOutLink:hover, a#m_kontaktLink:hover,
+    a#m_HelpLink:hover, a#m_mastersearchbtn:hover,
+    a#m_mastersearchbtn:hover, a#s_m_ForsideLink:hover,
+    a#s_m_defaultaspxLink:hover, a#s_m_LoginOutLink:hover,
+    a#s_m_kontaktLink:hover, a#s_m_HelpLink:hover,
+    a#s_m_mastersearchbtn:hover,
+    a#m_Content_submitbtn2:hover, .dropbtn.button
+	.lectioTabContainer:hover .lectioTabToolbar:hover .button a:hover,
+  .ui-dialog:hover .ui-dialog-buttonpane button:hover,
+  .dropdown:hover .dropbtn :not(a.dropdownA)
+  {
+      background-color: #fff !important;
+      color: black !important;
+      border: 1px solid #006ea9 !important;
+    }
+	.ls-subnav1:hover .buttonlink a:hover, .ls-subnav2:hover .buttonlink a:hover {
+	  background-color: #006ea9 !important;
+      color: white !important;
+      border: 0px solid white !important;
+      border-radius: 4px !important;
+      cursor: pointer !important;
+      background-image: none !important;
+      transition-duration: 0.8s !important;
+	}
+
+    TABLE.island .islandHeader, TABLE.island .islandHeaderRight,
+    TABLE.island .islandHeaderRight, th.islandHeader, .activityHeaderRow, TABLE.island .islandHeaderRight
+    {
+      background-color: #006ea9 !important;
+      color: white !important;
+      background-image: none !important;
+    }
+
+    .s2skema .s2infoHeader {
+      background-color: #f8f8f8 !important
+    }
+
+    .s2module-bg {
+    background-color: #F8F8F8;
+    border-top: solid 1px #BBB;
+    border-bottom: solid 1px #BBB;
+    }
+
+    SPAN[lectiocontextcard]{
+	     cursor:pointer !important;
+    }
+    /*.s2seperator{
+    	background: black !important;
+    }*/
+
+
+      /*Hide pupil picture*/
+      .ls-master-pageheader .thumber IMG {
+        display: none !important;
+      }
+
+
+        /*ISLAND HEADER*/
+        .islandHeaderContainer,
+        .islandHeader,
+        .ui-dialog .ui-dialog-titlebar {
+        color: white !important;
+        padding: .3em .8em .6em !important;
+        background: #006ea9 !important;
+        border: 1px solid #006ea9 !important;
+        border-radius: 4px !important;
+        }
+        SECTION.island
+        .islandHeaderContainer {
+        background-color: #006ea9 !important;
+        height: 1.6em !important;
+        }
+
+          /*Island*/
+          .ls-float-content>.island, .ls-float-content>.island2, .ls-float-content>.island3, .ls-float-content>.ls-float-content-element, .s2skema, .list {
+            box-shadow: 6px 6px 6px lightgray !important;
+          }
+
+          a#lectioReturn {
+            display:none;
+          }
+
+/*New islands front page*/
+#islandDOMparent
+                    {
+                        background-color:#fff!important;
+                    }
+                    #islandDOMchild, #islandDOMchildChild
+                                        {
+                                            border:none!important;
+                                            box-shadow:none!important
+                                        }
+
+
+.dropdown-content {top:28px;}

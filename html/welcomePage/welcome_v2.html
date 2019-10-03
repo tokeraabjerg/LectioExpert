@@ -1,0 +1,187 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Velkommen til Lectio Expert!</title>
+  <link rel="stylesheet" type="text/css" href="../../css/welcomePage/stylesheet-welcome_v2.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+</head>
+<body>
+  <header>
+    <div class="headerContainer">
+      <div class="headerTitle">
+        <a target="_blank" title="Gå til Lectio Experts hjemmeside" href="http://lectioexpert.000webhostapp.com/"><img src="../../icons/icon128.png"></a>
+      </div>
+      <div class="headerContent">
+        <a id="welcomeButton" class="button" href="#welcome" data-unlocked="true">Velkommen til</a><br>
+        <a id="settingsButton" class="button" href="#settings" data-unlocked="true">Opsæt dit Lectio</a><br>
+        <a id="thanksButton" class="button" href="#thanks" data-unlocked="false">Færdig</a><br>
+      </div>
+      <div class="headerFooter">
+        <span>Ophavsret Lectio Expert 2019</span>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- ################################################################## -->
+  <!--                         Welcome content                            -->
+  <!-- ################################################################## -->
+
+
+  <div id="welcome" class="page" data-shown="true">
+    <h1 id="pageTitle" class="center">Tak for at installere Lectio Expert!</h1>
+    <p id="pageDescription" class="center">
+      Dit studieliv er nu blevet en del lettere. Vi har lavet Lectio Expert i et forsøg på at forbedre det kedelige nuværende Lectio. Det har
+      vi forsøgt at gøre ved hjælp af et nyt tema og en række funktioner. Du kan læse mere om
+      Lectio Experts opstart <a target="_blank" href="http://lectioexpert.000webhostapp.com/html/contact.html">her</a>
+      <br><br>
+      Vi håber, at du kommer til at nyde Lectio Expert oplevelsen, og du er altid velkommen til, at skrive til os
+      hvis der er noget, du ikke nyder.
+      <br><br>
+      For at starte med at bruge Lectio Expert anbefaler vi, at du hurtigt opsætter dine indstillinger til
+      dit behov, så bliver Lectio Expert oplevelsen 100% tilpasset til dig.
+      <br><br>
+      <b>Tryk på "Næste side" for at gå videre.</b>
+      <br><br><br>
+    </p>
+    <img src="../../images/themes/scheme.png">
+    <div id="nextPage">
+      Næste side  <i class="fas fa-chevron-circle-right"></i>
+    </div>
+    <!-- <div id="previousPage">
+      <i class="fas fa-chevron-circle-left"></i>   Forrige side
+    </div> -->
+  </div>
+
+
+  <!-- ################################################################## -->
+  <!--                         Setting content                            -->
+  <!-- ################################################################## -->
+
+
+  <div id="settings" class="page" style="display:none;" data-shown="false">
+    <h1 id="pageTitle" class="center">Opsæt dit Lectio</h1>
+    <p id="pageDescription" class="center">
+      For at komme i gang med Lectio Expert kan du starte med at indstille auto-login med eventuel pin kode, tema og dag/nat tema.
+      <br>
+      Indstillingerne er allerede tilpasset til hvordan, vi selv foretrækker det, men det er ikke sikkert du ønsker det samme.
+    </p>
+    <br><br><br>
+
+    <div id="settingContent">
+      <div id="settingsLogin">
+        <tbody>
+          <table>
+            <td colspan='2'><p><b>Auto-Login<hr></b></p></td>
+
+            <tr>
+              <td class="description">
+                <span>Benyt Auto-Login</span>
+              </td>
+              <td>
+                <label class="switch">
+                  <input class="check" id="useAutoLogin" type="checkbox" name="useAutoLogin" value="true" checked="checked">
+                  <span class="slider round"></span>
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td class="description">
+                <span>Brug pin kode</span>
+              </td>
+              <td>
+                <label class="switch">
+                  <input class="check" id="usePinCode" type="checkbox" name="usePinCode" value="true" checked="checked">
+                  <span class="slider round"></span>
+                </label>
+              </td>
+            </tr>
+
+            <tr id="pinCodeTR">
+              <td class="description" colspan='2'>
+                Pin kode
+              </td>
+            </tr>
+            <tr>
+              <td colspan='2'>
+                <form>
+                  <input id="pinCode" type="password" name="pinCode" placeholder="Pin kode"></input>
+                  <br>
+                </form>
+              </td>
+            </tr>
+
+            <tr id="autoLoginBruger">
+              <td class="description" colspan='2'>
+                Brugernavn
+              </td>
+            </tr>
+            <tr>
+              <td colspan='2'>
+                <form>
+                  <input id="brugernavn" type="text" name="Brugernavn" placeholder="Brugernavn"></input>
+                  <br>
+                </form>
+              </td>
+            </tr>
+
+            <tr id="autoLoginAdgang">
+              <td class="description" colspan='2'>
+                Adgangskode
+              </td>
+            </tr>
+            <tr>
+              <td colspan='2'>
+                <form>
+                  <input id="adgangskode" type="password" name="Adgangskode" placeholder="Adgangskode"></input>
+                </form>
+              </td>
+            </tr>
+          </table>
+        </tbody>
+      </div>
+      <div id="settingsThemes">
+        <tbody>
+          <table>
+          </table>
+        </tbody>
+      </div>
+    </div>
+
+    <div id="nextPage">
+      Næste side  <i class="fas fa-chevron-circle-right"></i>
+    </div>
+    <div id="previousPage">
+      <i class="fas fa-chevron-circle-left"></i>   Forrige side
+    </div>
+  </div>
+
+
+  <!-- ################################################################## -->
+  <!--                         Finished content                           -->
+  <!-- ################################################################## -->
+
+
+  <div id="thanks" class="page" style="display:none;" data-shown="false">
+    <h1 id="pageTitle" class="center">Igen, tak!</h1>
+    <p id="pageDescription" class="center">
+      Husk at du altid kan skrive, hvis der er noget vi kan forbedre. Brug spørgsmålstegnet i højre bund af Lectio
+      hvis du ønsker at kontakte os.
+      <br><br>
+      <b>Indtil da, ha' en god dag!</b>
+      <br><br>
+      <iframe src="https://open.spotify.com/embed/track/6NPVjNh8Jhru9xOmyQigds" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+    </p>
+    <div id="previousPage">
+      <i class="fas fa-chevron-circle-left"></i>   Forrige side
+    </div>
+  </div>
+  <!-- ################################################################## -->
+  <!-- ################################################################## -->
+  <script type="text/javascript" src="../../js/lib.js"></script>
+  <script type="text/javascript" src="../../js/welcomePage/welcome_v2.js"></script>
+  <script type="text/javascript" src="../../js/popup/settings.js"></script>
+  <!-- <script type="text/javascript" src="../../js/popup/radioButton.js"></script> -->
+</body>
+</html>

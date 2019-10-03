@@ -1,0 +1,66 @@
+/**
+ * @Author: Toke Raabjerg <nadgryzione>
+ * @Date:   29-Dec-2018
+ * @Email:  tokermc@hotmail.com
+ * @Project: Lectio Expert
+ * @Last modified by:   nadgryzione
+ * @Last modified time: 01-Dec-2018
+ */
+
+/*    Island headers    */
+div .island .islandHeaderContainer,
+.s2weekHeader TD, .ls-table-absence
+.activityHeader> td, table .island
+.islandHeaderContainer, .lectioToolbar,
+ .ui-datepicker-header, .activityHeader
+  {
+    background:#d42426;
+  }
+
+/*    Island header content   */
+SECTION.island .islandHeaderContainer:not(#islandDOMchildHeader) span,
+.s2weekHeader td, .activityHeader td
+  {
+    color:white;
+  }
+
+/*    Titel, elevens navn     */
+#s_m_HeaderContent_MainTitle
+  {
+    color:#d42426;
+  }
+/*    Subnav title    */
+.ls-subnav1
+  {
+    border-bottom: 1px solid #d42426;
+  }
+
+textarea, input, select
+{
+  background:#d66566 !important;
+  color:black !important;
+}
+
+div.button a:not([href*="/"]):not(#s_m_mastersearchbtn):not(#m_mastersearchbtn):not(#snow)
+  {
+    background:#d42426 !important;
+    color:white!important;
+  }
+
+#s_m_mastersearchbtn i,
+#m_mastersearchbtn i,
+.islandContent .TreeNode-icon:not(.student):not(.teacher) i,
+.s2skemabrikInnerContainer .TreeNode-icon i,
+.documentchooser-foldertree-col.ls-foldertree2 .TreeNode-icon i,
+.xls-documentchooser-container-foldercontent-col-header .TreeNode-icon i,
+.ls-documentchooser-container-foldercontent-col-header .TreeNode-icon i,
+#s_m_Content_Content_DocumentGridView_ctl00 .TreeNode-icon:not(.student):not(.teacher) i,
+#s_m_Content_Content_threadGV_ctl00 .TreeNode-icon:not(.student):not(.teacher) i
+  {
+    color:#d42426;
+  }
+
+.lectioToolbar.lectioBorder.noWrap .TreeNode-icon i
+  {
+    color:white;
+  }

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+  .container {
+    width:100%;
+    height:100%;
+  }
+  body {
+    overflow:hidden;
+  }
+  </style>
+  <meta charset="utf-8">
+  <title>2048</title>
+  <!-- <script type="text/javascript" src="../js/Google_Analytics.js"></script> -->
+  <link href="../css/2048/main.css" rel="stylesheet" type="text/css">
+  <link rel="shortcut icon" href="../icons/favicon.ico">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <script type="text/javascript" src"../js/arrowBack.js"></script>
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <!--<meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui">-->
+</head>
+
+<body>
+  <div class="container">
+    <div><a id="lectioReturn" href="popup.html" class="arrowBack" style="display:none;color: black;position: absolute;font-size: 130%;top: 10px;text-decoration:none;">&larr; </a></div>
+    <div class="heading">
+      <h1 class="title">2048</h1>
+      <div class="scores-container">
+        <div class="score-container">0</div>
+        <div class="best-container">0</div>
+      </div>
+    </div>
+
+    <div class="above-game">
+      <p class="game-intro">Join the numbers and get to the <strong>2048 tile!</strong></p>
+      <a class="restart-button">New Game</a>
+    </div>
+
+    <div class="game-container">
+      <div class="game-message">
+        <p></p>
+        <div class="lower">
+	        <a class="keep-playing-button">Keep going</a>
+          <a class="retry-button">Try again</a>
+        </div>
+      </div>
+
+      <div class="grid-container">
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+      </div>
+
+      <div class="tile-container">
+
+      </div>
+    </div>
+
+
+    <!--
+    <hr>
+    <p>
+    <strong class="important">Note:</strong> This site is the official version of 2048. You can play it on your phone via <a href="http://git.io/2048">http://git.io/2048.</a> All other apps or sites are derivatives or fakes, and should be used with caution.
+    </p>
+    <hr>
+    <p>
+    Created by <a href="http://gabrielecirulli.com" target="_blank">Gabriele Cirulli.</a> Based on <a href="https://itunes.apple.com/us/app/1024!/id823499224" target="_blank">1024 by Veewo Studio</a> and conceptually similar to <a href="http://asherv.com/threes/" target="_blank">Threes by Asher Vollmer.</a>
+    </p>
+    <br></br>
+    <p>
+      The MIT License (MIT)
+
+--><p style='text-align:center;'>Copyright (c) 2014 Gabriele Cirulli</p><!--
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+</p>-->
+
+  </div>
+
+  <script src="../js/2048/bind_polyfill.js"></script>
+  <script src="../js/2048/classlist_polyfill.js"></script>
+  <script src="../js/2048/animframe_polyfill.js"></script>
+  <script src="../js/2048/keyboard_input_manager.js"></script>
+  <script src="../js/2048/html_actuator.js"></script>
+  <script src="../js/2048/grid.js"></script>
+  <script src="../js/2048/tile.js"></script>
+  <script src="../js/2048/local_storage_manager.js"></script>
+  <script src="../js/2048/game_manager.js"></script>
+  <script src="../js/2048/application.js"></script>
+</body>
+</html>

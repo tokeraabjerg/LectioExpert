@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html>
+	<title>Lectio Expert - Indstillinger</title>
+<head>
+	<script type="text/javascript" src="../../js/lib.js"></script>
+	<script type="text/javascript" src="../../js/loadTheme.js"></script>
+	<script type="text/javascript" src="../../js/changeColor.js"></script>
+	<!-- <script type="text/javascript" src="../../js/settingsPage.js"></script> -->
+	<script type="text/javascript" src="../../js/popup/jscolor.js"></script>
+	<script type="text/javascript" src="../../js/Google_Analytics.js"></script>
+	<link rel="stylesheet" type="text/css" href="../../css/stylesheet-settingsN.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <style>
+		@media only screen and (min-width:420px) {
+			div.masterContent {
+				width:350px;
+				position: absolute;
+						left: 50%;
+						transform: translate(-50%, -50%);
+			}
+			td.open, td.return {display:none;}
+		}
+	    .jscolor {
+	      width:75px;
+	    }
+	    .header {
+	      position:fixed;
+	          top:0px;
+	          left:0px;
+	      width:100%;
+	      background:#dfe3e7;
+	      height:15px;
+				z-index:3;
+	    }
+	    .headerTitle {
+	      text-align:center;
+	      line-height:0px;
+	    } table.header > tbody  {box-shadow:0px 0px 10px 1px grey;}
+	    .return {
+				width:25px;
+				float:left;
+	      color:black !important;
+	      text-decoration: none;
+				margin-left:5px;
+	    } .return i {font-size:200%;}
+	    #themeContent {
+	      max-height:0px;
+	      overflow:hidden;
+	      transition:1s;
+	    }
+	    .description {
+	      width:100%;
+	      text-align:left;
+	    }
+			hr {
+				width:95%;
+				margin-left:0px;
+			}
+			.open {
+				float:right;
+				width:25px;
+				color:black !important;
+			} a.open i {font-size:200%;margin-left:-15px;}
+			.fas {
+				    line-height: 40px !important;
+			}
+			.warning {
+				color:red;
+				font-style:italic;
+			}
+			p.section {
+				font-weight:600px;color:black;
+			}
+			#autoLoginAdgang *, #autoLoginBruger *, #pinCodeTR *
+			{
+				text-align:center;
+			}
+			input#brugernavn, input#adgangskode, input#pinCode
+			{
+				display:block;
+				margin:auto;
+			}
+			::placeholder {transition: opacity 1s;}
+			::placeholder:focus {
+				opacity:0;
+			}
+			input.small {max-width:75px;margin-right:20px;margin-top:5px;margin-bottom:5px;}
+			input.big {max-width:250px;margin-top:5px;margin-bottom:5px;}
+
+			div#island_display div#section1,
+			div#island_display div#section2,
+			div#island_display div#section3,
+			div#island_display div#section4
+			{
+				width:48%;
+				display:inline-block;
+			}
+			div#island_display div:not(.text):not(#section1):not(#section2):not(#section3):not(#section4) {
+				display: inline-block;
+				/* width:70%;
+				height:70%; */
+				width:75px;
+				height:60px;
+				margin: 2px;
+				border: 1px solid black;
+			}
+			div#island_display div:not(.text):not(#section1):not(#section2):not(#section3):not(#section4) {width:95%;}
+			div#island_display div div.text {font-size:10px;text-align:center;}
+			div#island_display div#actualSection {height:135px !important;}
+			div#island_display div:nth-child(2) {}
+	</style>
+
+</head>
+	<body>
+	<meta charset="UTF-8">
+    <table class="header">
+      <tr>
+        <td class="return">
+          <a href="popup.html" class="return" title="Gå tilbage"><i class="fas fa-chevron-circle-left"></i></a>
+        </td>
+        <td class="headerTitle">
+          <h2>Indstillinger</h2>
+        </td>
+				<td class="open">
+					<a href="settings.html" target="_blank" title="Åben på en ny fane"class="open"><i class="fas fa-external-link-alt"></i></a>
+				</td>
+      </tr>
+    </table>
+    <div style="height:30px;width:100%"></div>
+
+
+
+
+
+<!--## MASTER CONTENT START ##-->
+	<div class="masterContent">
+  <tbody>
+    <table>
+			<!--## TABLE CONTENT START ##-->
+				<td colspan='2'><p><b>Auto-Login<hr></b></p></td>
+
+				<tr>
+					<td class="description">
+						<span>Benyt Auto-Login</span>
+					</td>
+					<td>
+						<label class="switch">
+						  <input class="check" id="useAutoLogin" type="checkbox" name="useAutoLogin" value="true" checked="checked">
+						  <span class="slider round"></span>
+						</label>
+					</td>
+				</tr>
+				<tr>
+					<td class="description">
+						<span>Brug pin kode</span>
+					</td>
+					<td>
+						<label class="switch">
+							<input class="check" id="usePinCode" type="checkbox" name="usePinCode" value="true" checked="checked">
+							<span class="slider round"></span>
+						</label>
+					</td>
+				</tr>
+
+				<tr id="pinCodeTR">
+					<td class="description" colspan='2'>
+						Pin kode
+					</td>
+				</tr>
+				<tr>
+					<td colspan='2'>
+						<form>
+							<input id="pinCode" type="password" name="pinCode" placeholder="Pin kode"></input>
+							<br>
+						</form>
+					</td>
+				</tr>
+
+				<tr id="autoLoginBruger">
+					<td class="description" colspan='2'>
+						Brugernavn
+					</td>
+				</tr>
+				<tr>
+					<td colspan='2'>
+						<form>
+							<input id="brugernavn" type="text" name="Brugernavn" placeholder="Brugernavn"></input>
+							<br>
+						</form>
+					</td>
+				</tr>
+
+				<tr id="autoLoginAdgang">
+					<td class="description" colspan='2'>
+						Adgangskode
+					</td>
+				</tr>
+				<tr>
+					<td colspan='2'>
+						<form>
+							<input id="adgangskode" type="password" name="Adgangskode" placeholder="Adgangskode"></input>
+						</form>
+					</td>
+				</tr>
+
+				<!-- <td colspan='2'><p><b>Temaer<hr></b></p></td>
+
+          <tr>
+            <td class="description">
+              Simpelt grå/hvid tema <a href="../../images/themes/simple.png" target="_blank" style="color:#444;"><i class="fas fa-external-link-alt"></i></a>
+            </td>
+            <td>
+              <label class="switch">
+                <input class="check" id="simpleTheme" type="checkbox" name="simpleTheme" value="true" checked="checked">
+                <span class="slider round"></span>
+              </label>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="description">
+              Blå tema <a href="../../images/themes/modern.png" target="_blank" style="color:#444;"><i class="fas fa-external-link-alt"></i></a>
+            </td>
+            <td>
+              <label class="switch">
+                <input class="check" id="useTheme" type="checkbox" name="useTheme">
+                <span class="slider round"></span>
+              </label>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="description">
+              Forbedringer til skema
+            </td>
+            <td>
+              <label class="switch">
+                <input class="check" id="useThemeSkema" type="checkbox" name="useThemeSkema" value="true" checked="checked">
+                <span class="slider round"></span>
+              </label>
+            </td>
+          </tr>
+
+          <tr><td><br></td></tr>
+          <tr>
+            <td><p><b>Mørkt tema</b></p></td>
+          </tr>
+
+          <tr>
+            <td class="description">
+              Mørkt tema efter solnedgang
+            </td>
+            <td>
+              <label class="switch">
+                <input class="check" id="night" type="checkbox" name="night" value="true">
+                <span class="slider round"></span>
+              </label>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="description">
+              Mørkt tema hele tiden
+            </td>
+            <td>
+              <label class="switch">
+                <input class="check" id="dark" type="checkbox" name="dark">
+                <span class="slider round"></span>
+              </label>
+            </td>
+          </tr>
+
+          <tr><td><br></td></tr>
+          <tr>
+            <td><p><b>Eget tema</b></p></td>
+          </tr>
+
+          <tr>
+            <td class="description">
+              Benyt din egen farver
+            </td>
+            <td>
+              <label class="switch">
+                <input class="check" id="useCustomColor" type="checkbox" name="useCustomColor">
+                <span class="slider round"></span>
+              </label>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="description">
+              Farve:
+            </td>
+            <td>
+              <input id='jscolor' class="jscolor"></input>
+            </td>
+          </tr>
+
+					<tr>
+						<td class="description">
+							Benyt din egen baggrund (URL):
+						</td>
+						<td>
+							<label class="switch">
+								<input class="check" id="customBackground" type="checkbox" name="customBackground">
+								<span class="slider round"></span>
+							</label>
+						</td>
+					</tr>
+					<tr>
+						<td class="description">
+							<div id="urlwrong" class="warning"></div>
+							<input type="text" id="customBackgroundURL">
+						</td>
+					</tr>
+
+          <tr><td><br></td></tr>
+
+        <tr>
+          <td class="description" colspan="2">
+            <p class='black' style="font-weight:600px;color:black;"><b>Funktioner</b></p><hr>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="description">
+            Karakter gennemsnit
+          </td>
+          <td>
+            <label class="switch">
+              <input class="check" id="gradeAverage" type="checkbox" name="gradeAverage" checked>
+              <span class="slider round"></span>
+            </label>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="description">
+            Nedtælling på opgaver
+          </td>
+          <td>
+            <label class="switch">
+              <input class="check" id="opgaverCountDown" type="checkbox" name="opgaverCountDown" checked>
+              <span class="slider round"></span>
+            </label>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="description">
+            Hovedmenu +
+          </td>
+          <td>
+            <label class="switch">
+              <input class="check" id="hovedMenuPlus" type="checkbox" name="hovedMenuPlus" checked>
+              <span class="slider round"></span>
+            </label>
+          </td>
+        </tr>
+
+				<tr>
+					<td class="description">
+						Anti-AFK
+					</td>
+					<td>
+						<label class="switch">
+							<input class="check" id="antiAFK" type="checkbox" name="antiAFK" checked>
+							<span class="slider round"></span>
+						</label>
+					</td>
+				</tr>
+
+        <tr>
+          <td class="description">
+            Zoom niveau (I decimal):
+          </td>
+          <td style="float:right;">
+            <input id="zoomLevel" name="zoomLevel" value="1.0" style="width:45px;"></input>
+          </td>
+        </tr>
+
+				<tr><td><br></td></tr>
+
+			<tr>
+				<td class="description" colspan="2">
+					<p class='black' style="font-weight:600px;color:black;"><b>Yderlige indstillinger</b></p><hr>
+				</td>
+			</tr>
+
+				<tr>
+					<td class="description">
+						Flyt skema på forsiden
+					</td>
+					<td>
+						<label class="switch">
+							<input class="check" id="moveSkemaIsland" type="checkbox" name="moveSkemaIsland" checked>
+							<span class="slider round"></span>
+						</label>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="description">
+						Flyt undervisning på forsiden
+					</td>
+					<td>
+						<label class="switch">
+							<input class="check" id="moveUndervisningIsland" type="checkbox" name="moveUndervisningIsland" checked>
+							<span class="slider round"></span>
+						</label>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="description">
+						Tilføj <i class="fas fa-search"></i> til søg knappen
+					</td>
+					<td>
+						<label class="switch">
+							<input class="check" id="addSearchIcon" type="checkbox" name="addSearchIcon" checked>
+							<span class="slider round"></span>
+						</label>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="description">
+						Tilføj 10px højde til "importantInfo" på forsiden
+					</td>
+					<td>
+						<label class="switch">
+							<input class="check" id="importantInfoHeight" type="checkbox" name="importantInfoHeight" checked>
+							<span class="slider round"></span>
+						</label>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="description">
+						Dag note
+					</td>
+					<td>
+						<label class="switch">
+							<input class="check" id="dayNote" type="checkbox" name="dayNote" checked>
+							<span class="slider round"></span>
+						</label>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="description">
+						Hints / Fun facts
+					</td>
+					<td>
+						<label class="switch">
+							<input class="check" id="hintEnabled" type="checkbox" name="hintEnabled" checked>
+							<span class="slider round"></span>
+						</label>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="description">
+						Check fravær og mørkgør på skemaet
+					</td>
+					<td>
+						<label class="switch">
+							<input class="check" id="checkAbsence" type="checkbox" name="checkAbsence" checked>
+							<span class="slider round"></span>
+						</label>
+					</td>
+				</tr> -->
+
+		<!--## TABLE CONTENT END ##-->
+    </table>
+  </tbody>
+	<!--## MASTER CONTENT START ##-->
+	</div>
+	<script type="text/javascript" src="../../js/lib.js"></script>
+	<script type="text/javascript" src="../../js/popup/settingsPage.js"></script>
+	<script type="text/javascript" src="../../js/popup/settings.js"></script>
+	<script type="text/javascript" src="../../js/popup/radioButton.js"></script>
+</body>
+</html>
