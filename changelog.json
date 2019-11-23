@@ -1,6 +1,19 @@
 {
   "updates": [
     {
+      "version":"2.8.5",
+      "changelog": [
+        "<li> - Tilføjet nogle links til linksene... til hovedmenu +. </li><br>"
+      ]
+    },
+    {
+      "version":"2.8.4",
+      "changelog": [
+        "<li> - Tilføjet nogle links til hovedmenu +. </li><br>",
+        "<li> - Lavet preset baggrund nat/dag. </li><br>"
+      ]
+    },
+    {
       "version":"2.8.2",
       "changelog": [
         "<li> - Skema timeline offset fix. </li><br>"

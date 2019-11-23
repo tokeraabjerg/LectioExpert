@@ -4,7 +4,7 @@
  * @Email:  tokermc@hotmail.co
  * @Project: Lectio Expert
  * @Last modified by:
- * @Last modified time: 2019-05-07T14:31:53+02:00
+ * @Last modified time: 2019-10-29T16:48:33+01:00
  */
 
  /*----------------------------------------------------------------*/
@@ -12,6 +12,7 @@
  /*----------------------------------------------------------------*/
 
  hints = [
+ 'Er der noget du gerne vil have lavet om på Lectio Expert? Så kan du lave pulls på GitHub <a style="text-decoration:underline!important;" href="https://github.com/tokeraabjerg/LectioExpert" target="_blank">her.</a>',
  'Du kan ændre temaet i popup-vinduet under indstillinger.',
  'Du kan slå stort set alle funktioner fra i popup-vinduet under indstillinger.',
  'Du kan vælge din egen farve til moderne tema.',
@@ -27,10 +28,12 @@
  //Review
  'Giv os <a href="https://chrome.google.com/webstore/detail/lectio-expert/hdfpfilneelpdfahbkehkgjlbccijkkk">en anmeldelse</a> på Chrome Webstore så flere gymnasieelever kan finde Lectio Expert!',
  'Du kan skrive dine foreslag til shitty facts <a style="text-decoration:underline!important;" href="https://goo.gl/forms/yCV5EOjBohXrKslD2" target="_blank">her.</a>',
+ 'Er der noget du gerne vil have lavet om på Lectio Expert? Så kan du lave pulls på GitHub <a style="text-decoration:underline!important;" href="https://github.com/tokeraabjerg/LectioExpert" target="_blank">her.</a>',
  '*'//End with * to prevent it skipping the last one
  ];
 
  funFacts = [
+ 'Der findes en type frø (Hairy Frog) som bruger sine knogler som våben, ved at brække sine tæer og pierce huden for at danne kløer.',
  'Igennem dit liv producerer du nok spyt til, at fylde 2 swimmingpools.',
  'Frygten for lange ord hedder "hippopotomonstrosesquipedaliophobia".',
  'Et nys har i gennemsnittet en hastighed på 166,7 km/t',
@@ -51,7 +54,24 @@
  'Vi er alle sammen døende. (Thank god)',
  'Angsten for indlæring kaldes "Sophofobi"',
  'Hvorfor kan samfundsfaglige ikke differentieres? Fordi de ikke har nogen funktion',
+ 'Ingen ved om der nogensinde er nogen, som har brugt sin egen lort i stedet for barberskum.',
+ 'At spise fastfood gør dig ikke hurtig',
+ 'Birds arent real',
+ 'I 2017 var der flere folk der døde efter selfie ulykker end ved haj angreb',
+ '12+1 er det samme som 11+2',
+ 'Der er 336 buler i en normal golfbold',
+ 'Nogen har opfundet alle ord',
+ 'Størstedelen af mennesker lever på jorden',
+ 'Der er flere atomer i universet end der er i vores galakse',
+ '5 ud af 6 læger siger at russisk roulette er fuldstændig sikkert',
+ 'Der er flere hjerneceller i menneskekroppen end hjerner',
+ 'Alt i verden er enten en kartoffel eller ikke en kartoffel',
+ 'Merkur er tættere på solen end Jorden',
+ 'Der findes en type frø (Hairy Frog) som bruger sine knogler som våben, ved at brække sine tæer og pierce huden for at danne kløer.',
+ 
+
  //Review
+ 'Du kan skrive dine foreslag til shitty facts <a href="https://goo.gl/forms/yCV5EOjBohXrKslD2" style="text-decoration:underline!important;" target="_blank">her.</a>',
  'Giv os <a href="https://chrome.google.com/webstore/detail/lectio-expert/hdfpfilneelpdfahbkehkgjlbccijkkk">en anmeldelse</a> på Chrome Webstore så flere gymnasieelever kan finde Lectio Expert!',
  'Du kan skrive dine foreslag til shitty facts <a href="https://goo.gl/forms/yCV5EOjBohXrKslD2" style="text-decoration:underline!important;" target="_blank">her.</a>',
  '*'//End with * to prevent it skipping the last one

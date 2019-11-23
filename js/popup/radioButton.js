@@ -4,7 +4,7 @@
  * @Email:  tokermc@hotmail.co
  * @Project: Lectio Expert
  * @Last modified by:
- * @Last modified time: 2019-02-16T02:53:09+01:00
+ * @Last modified time: 2019-11-01T20:27:48+01:00
  */
 
 document.addEventListener('DOMContentLoaded', function (event) {
@@ -46,6 +46,29 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
     if (night == true) {
         document.getElementById('darkThemeNight').checked = false;
+    }
+  }
+
+
+  //Background
+
+  //bg standard switch
+  document.querySelector("#Lectio_standardBackground").addEventListener('click', radioStandard);
+  document.querySelector("#Lectio_customBackground").addEventListener('click', radioCustom);
+
+  function radioStandard () {
+    var eStandard = document.querySelector("#Lectio_standardBackground").checked;
+    var eCustom = document.querySelector("#Lectio_customBackground").checked;
+    if (eStandard == true) {
+      document.querySelector("#Lectio_customBackground").checked = false;
+    }
+  }
+
+  function radioCustom () {
+    var eStandard = document.querySelector("#Lectio_standardBackground").checked;
+    var eCustom = document.querySelector("#Lectio_customBackground").checked;
+    if (eCustom == true) {
+      document.querySelector("#Lectio_standardBackground").checked = false;
     }
   }
 });

@@ -4,7 +4,7 @@
  * @Email:  tokermc@hotmail.co
  * @Project: Lectio Expert
  * @Last modified by:
- * @Last modified time: 2019-04-11T00:42:32+02:00
+ * @Last modified time: 2019-11-01T20:15:16+01:00
  */
 // key id type(checkbox/input), extra
 var s =
@@ -24,7 +24,8 @@ var s =
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	["Lectio_useCustomColor",						"Benyt din egen farver",																								"checkbox"		],
 	["Lectio_customColor",							"Farve:",																																"inputS"			],
-	["Lectio_customBackground",					"Benyt din egen baggrund (URL):",																				"checkbox"		],
+	["Lectio_standardBackground",					"Benyt standard baggrund",																							"checkbox"		],
+	["Lectio_customBackground",					"Benyt custom baggrund (URL):",																					"checkbox"		],
 	["Lectio_customBackgroundURL",			"",																																			"inputB"			],
 	["Lectio_customBackgroundOnlyDay",	"Benyt kun baggrund om dagen",																					"checkbox"		],
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

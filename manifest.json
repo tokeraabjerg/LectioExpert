@@ -2,10 +2,10 @@
   "author": "Toke & Ghaith",
   "description": "Gør studielivet en del lettere med en række nye funktioner til Lectio!",
   "manifest_version": 2,
-  "version": "20182.1.0",
-  "version_name": "2.8.2",
+  "version": "20182.1.4",
+  "version_name": "2.8.6",
   "name": "Lectio Expert",
-  "permissions": ["activeTab", "storage", "declarativeContent"],
+  "permissions": ["https://www.lectio.dk/*", "storage"],
   "background": {
   "page": "html/background.html",
   "persistent": true

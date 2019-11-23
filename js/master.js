@@ -4,7 +4,7 @@
  * @Email:  tokermc@hotmail.co
  * @Project: Lectio Expert
  * @Last modified by:
- * @Last modified time: 2019-08-21T02:11:46+02:00
+ * @Last modified time: 2019-11-02T13:41:06+01:00
  */
 /*
 #############     Table of contents     #############
@@ -357,15 +357,24 @@ function mCheck () {
      if(r.Lectio_customBackground != false &&
         r.Lectio_customBackgroundURL != undefined &&
          r.Lectio_customBackgroundURL != "" &&
-          r.Lectio_customBackgroundURL != "undefined") {
-            if(r.Lectio_customBackgroundOnlyDay == true) {
-              if(!document.querySelector("#nightTheme")) {fCustomBackground(r.Lectio_customBackgroundURL);}
+          r.Lectio_customBackgroundURL != "undefined" || r.Lectio_standardBackground != false) {c.l("i passed");
+            if(r.Lectio_standardBackground == false) {
+              if(r.Lectio_customBackgroundOnlyDay == true) {
+                if(!document.querySelector("#nightTheme")) {fCustomBackground(r.Lectio_customBackgroundURL);}
+              } else {
+                fCustomBackground(r.Lectio_customBackgroundURL);
+              }
+          } else {c.l("i passed v2");
+            if(document.querySelector("#nightTheme")) {
+              fCustomBackground("chrome-extension://"+chrome.runtime.id+"/images/bgNight.png", true); //night
             } else {
-              fCustomBackground(r.Lectio_customBackgroundURL);
+              fCustomBackground("chrome-extension://"+chrome.runtime.id+"/images/bg.jpg", true); //day
             }
-     }
-     if(r.Lectio_changeIcons != false) {fChangeIcons();}
+          }
+     } else {c.l("i didnt pass");}
 
+     //change icons
+     if(r.Lectio_changeIcons != false) {fChangeIcons();}
 
      //Zoom level
      if (r.Lectio_zoomLevel != undefined) {zoomLevel (r.Lectio_zoomLevel);}
@@ -483,10 +492,10 @@ function mCheck () {
     //                      Custom Background                         //
     /*----------------------------------------------------------------*/
 
-    function fCustomBackground (href) {
+    function fCustomBackground (href, bypass) {
       fAddCSS("html {background-color: rgba(0, 0, 0, 0) !important; background-size:cover; background-image: url("+href+");} body, #masterContent, .ls-master-container1, .ls-master-container2, .ls-std-island-layout-ltr {background-color:transparent !important;}");
       //Warn the user if not using https
-      if(!/https/.test(href) && href.length > 2) {
+      if(!/https/.test(href) && href.length > 2 && !bypass) {
         fWarn("Vi anbefaler at du bruger HTTPS til dit baggrund URL, på den måde kan ingen opsnappe dit data. (Prøv at erstat eks. 'http://www...' med 'https://www...')", 1, 15000);
       }
     }
@@ -596,6 +605,7 @@ function mCheck () {
     }
 
     function fBackgroundIMG (url) {
+
       document.body.style = "background-image:url("+url+");background-size:cover;";
       document.getElementById('masterContent').style = "background:none!important;background-color:none!important;";
     }
@@ -681,7 +691,7 @@ function mCheck () {
       div.className += ' dropdown';
       child.href = '#';
       child.style = "display:none!important;";
-      div.innerHTML += "<a type='button' class='dropbtn button lxHovedMenuPlus'>Hovedmenu +</a>";
+      div.innerHTML += "<a type='button' class='dropbtn button lxHovedMenuPlus'>Hovedmenu <i style='font-size:75%;' class='fas fa-plus'></i></a>";
 
       var dropdown = document.createElement('div');
           dropdown.className = "dropdown-content";
@@ -698,6 +708,11 @@ function mCheck () {
           dropdown.innerHTML += "<a class='dropdownA' href='https://www.lectio.dk/lectio/"+lectio_skoleId+"/FindSkemaAdv.aspx'>Avanceret skema</a><br>";
           dropdown.innerHTML += "<a class='dropdownA' href='https://www.lectio.dk/lectio/"+lectio_skoleId+"/skift_password.aspx?prevurl=default.aspx'>Skift adgangskode</a><br>";
           dropdown.innerHTML += "<a class='dropdownA' href='https://www.lectio.dk/lectio/"+lectio_skoleId+"/default.aspx'>Lectio hovedmenu</a><br>";
+          dropdown.innerHTML += "<a class='dropdownA' href='#'><hr></a><br>";
+            dropdown.innerHTML += "<a class='dropdownA' href='https://docs.google.com/forms/d/e/1FAIpQLSf09LyWwIdxxAKFht_6cmAX-40UzZOgQiVHTIQhz9hG736Ydg/viewform?embedded=true'><i class='fas fa-exclamation'></i> Rapporter problem</a><br>";
+              dropdown.innerHTML += "<a class='dropdownA' href='https://goo.gl/forms/yCV5EOjBohXrKslD2'><i class='fas fa-poo'></i> Indsend shitty fact </a><br>";
+              dropdown.innerHTML += "<a class='dropdownA' href='https://lectioexpert.000webhostapp.com/'><i class='fas fa-home'></i> Vores hjemmeside </a><br>";
+
       div.appendChild(dropdown);
     }
 
