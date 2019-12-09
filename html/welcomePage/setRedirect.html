@@ -1,0 +1,56 @@
+<!--
+As I was writing this I realized I already have the users school id saved in localStorage.
+Meaning I can just redirect the user to the last school they logged into.
+Meaning I am a retard because I wasted a couple of hours writing this totally uneccesary code.
+
+I'm gonna leave this here for now, because I'm angry and disapointed... -->
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+    <style>
+      body {background-image: url("../../images/bgNight.png"); background-size:cover;}
+      * {color:white;}
+      div#title h1 {text-align:center;margin-top:10vh;font-size:4em; font-family:"verdana";}
+      #sub {text-align:center; font-size: 1.4em;}
+      span#subtitle p {text-align:center;}
+
+      #schools {
+        margin-top:10vh;
+        max-height:60vh;
+        overflow-y:scroll;
+        text-align:center;
+      }
+      #schools div {
+        background: #55555599 !important;
+        box-shadow: 1px 1px 1px none;
+        border: 1px solid #555555;
+        padding: 4px 7px;
+        min-height: 15px;
+        line-height: 14px;
+        min-width: 30px;
+        white-space: normal;
+        text-align: center;
+        text-decoration: none;
+        font-size: 14px !important;
+        color: #EBEEEE !important;
+        margin: 0 0 2px;
+        cursor: pointer;
+        -webkit-transition: 200ms ease-in-out, width 0ms, height 0ms;
+      }
+      #schools div a {max-width:50vw;}
+    </style>
+  </head>
+  <body>
+    <div id="title"><h1>Skole videresendelse</h1></div>
+    <span id="subtitle">
+      <p id="sub">
+        Vælg din skole nedenunder så vil du fremover blive videresendt direkte til din skoles<br> login-side når du indtaster "www.lectio.dk".
+      </p>
+      <p>Kan du ikke finde din skole? Klik <a href="https://www.lectio.dk/lectio/login_list.aspx?showall=1" target="_blank">her</a> for at opdatere listen.</p>
+    </span>
+
+    <div id="schools"></div>
+  </body>
+  <script type="text/javascript" src="../../js/welcomePage/setRedirect.js"></script>
+</html>

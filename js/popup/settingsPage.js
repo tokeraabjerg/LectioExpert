@@ -4,7 +4,7 @@
  * @Email:  tokermc@hotmail.co
  * @Project: Lectio Expert
  * @Last modified by:
- * @Last modified time: 2019-11-01T20:15:16+01:00
+ * @Last modified time: 2019-12-09T19:10:21+01:00
  */
 // key id type(checkbox/input), extra
 var s =
@@ -31,6 +31,7 @@ var s =
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	["",																"Funktioner",																														"section"			],
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	["Lectio_useRedirect",							"Benyt videresendelse fra forside",																			"checkbox"		],
 	["Lectio_gradeAverage",							"Karakter gennemsnit",																									"checkbox"		],
 	["Lectio_opgaverCountDown",					"Nedtælling på opgaver",																								"checkbox"		],
 	["Lectio_hovedMenuPlus",						"Hovedmenu +",																													"checkbox"		],
@@ -177,7 +178,7 @@ for (var i = 0; i < buttons.length; i++) {
 	buttons[i].addEventListener('click', trackButton);
 }
 function trackButton(e) {
-	_gaq.push(['_trackEvent', e.target.id, 'clicked']);
+	_gaq.push(['_trackEvent', e.target.id, e.target.checked.toString()]);
 	//_gaq.push(['_trackEvent', e.target.id, e.target.checked, 'other info']);
 	// _gaq.push(['_trackEvent', e.target.id, e.target.checked]);
 	// _gaq.push(['_trackEvent', "settingsInteract", e.target.id, e.target.checked ? 1 : 0]);

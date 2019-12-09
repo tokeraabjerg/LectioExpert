@@ -4,26 +4,9 @@
  * @Email:  tokermc@hotmail.co
  * @Project: Lectio Expert
  * @Last modified by:
- * @Last modified time: 2019-11-02T13:41:06+01:00
+ * @Last modified time: 2019-12-09T19:40:21+01:00
  */
-/*
-#############     Table of contents     #############
 
-1#    Check storage
-2#    LectioCSS and fontAwesome links
-
-3#    DOM FUNCTIONS
-    1#    Set Zoom
-    2#    addSearchIcon
-    3#    Forside importantInfo
-    4#    Hovedmenu inject
-    5#    Move skema island
-    6#    Check afk
-    7#    Feedback dialog
-    8#    DOM on front page "lectio.dk"
-
-#############   Table of contents end   #############
-*/
 console.time("Finished master.js in");
 /*----------------------------------------------------------------*//*----------------------------------------------------------------*/
 /*                                                                *//*                                                                */
@@ -79,11 +62,15 @@ var c=console;
 
 var url=window.location.href;
 
-var schoolId=/\/lectio\//.test(url) ?
-    url.slice(url.indexOf('/lectio/')+8,url.indexOf('lectio/')+10)
-    :
-    sG(schoolId);
-    sS("schoolId",schoolId);
+var schoolId=/\/lectio\//.test(url);
+    if(schoolId==true) {
+      schoolId=url.slice(url.indexOf('/lectio/')+8,url.indexOf('lectio/')+10);
+      chrome.storage.local.set({"schoolId":schoolId});
+    } else {
+      chrome.storage.local.get(["schoolId"], function (r) {
+        schoolId=r.schoolId;
+      });
+    }
 
 var studentId= /elevid=/.test(url) ?
     url.slice(url.indexOf('elevid=') + 7,
@@ -97,6 +84,7 @@ var studentId= /elevid=/.test(url) ?
       studentId = studentId.slice(0,studentId.indexOf("&"));
     }
     sS("studentId",studentId);
+    //chrome.storage.local.set({"studentId": studentId});
 
 //var studentId= /elevid=/.test(url) ? url.slice(url.indexOf('elevid=') + 7, /&prevurl=/.test(url) ? url.indexOf('=prevurl=') : url.length) : sG(studentId);     sS("studentId",studentId);
 c.l(schoolId, studentId);
@@ -413,6 +401,13 @@ function mCheck () {
           break;
       case /forside.aspx/.test(url) && (!/prevurl=forside.aspx/.test(url)): //Forside url
           document.title = "Lectio | Forside";
+          //check if the user was redirected
+          chrome.storage.local.get(["redirected"], function (r) {
+            if(r.redirected == true) {
+              chrome.storage.local.set({"redirected":false});
+              
+            }
+          });
           if((document.getElementsByClassName('island  mediumBlock mediumBlockHeight')[1]) != null) {
             var e = document.getElementById('s_m_Content_Content_skemaIsland_pa').innerHTML;
             //Remove href="*" and src="*"
@@ -1045,6 +1040,27 @@ function pFrontPage () {
               iframe.querySelector('#searchQuery-result').innerHTML = r;
             });
     }
+  }());
+  // As I was writing this I realized I already have the users school id saved in localStorage.
+  // Meaning I can just redirect the user to the last school they logged into.
+  // Meaning I am a retard because I wasted a couple of hours writing this totally uneccesary code.
+  //
+  // I'm gonna leave this here for now, because I'm angry and disapointed...
+
+  // schools to use for redirect
+  (function () {
+    chrome.storage.local.get(["schoolId", "Lectio_useRedirect"], function (r) {
+      if(isNaN(r.schoolId) == false && r.Lectio_useRedirect == true) {c.l("https://www.lectio.dk/lectio/"+ r.schoolId +"/login.aspx");
+        chrome.storage.local.set({"redirected":true});
+        window.location.href="https://www.lectio.dk/lectio/"+ r.schoolId +"/login.aspx";
+      }
+    });
+  //   var ar=[];
+  //   var e=document.querySelectorAll(".buttonHeader.textLeft a");
+  //   for (var i=0;i<e.length;i++) {
+  //   	ar.push([[e[i].innerHTML],[e[i].href]]);
+  //   }
+  //   chrome.storage.local.set({"schools": ar});
   }());
 }
 

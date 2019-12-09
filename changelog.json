@@ -1,6 +1,12 @@
 {
   "updates": [
     {
+      "version":"2.8.7",
+      "changelog": [
+        "<li> - Automatisk videresendelse til ens skole. </li><br>"
+      ]
+    },
+    {
       "version":"2.8.5",
       "changelog": [
         "<li> - Tilføjet nogle links til linksene... til hovedmenu +. </li><br>"

@@ -3,8 +3,8 @@
  * @Date:   02-May-2018
  * @Email:  tokermc@hotmail.co
  * @Project: Lectio Expert
- * @Last modified by:   nadgryzione
- * @Last modified time: 10-Nov-2019
+ * @Last modified by:
+ * @Last modified time: 2019-12-09T19:11:09+01:00
  */
 
 /*--- VARIABLES START ---*/
@@ -47,7 +47,8 @@ chrome.runtime.onInstalled.addListener(function(details){
         Lectio_importantInfoHeight: true,
         Lectio_dayNote: true,
         Lectio_hintEnabled: true,
-        Lectio_standardBackground: true
+        Lectio_standardBackground: true,
+        Lectio_useRedirect: true
       });
         window.open("chrome-extension://"+chrome.runtime.id+"/html/welcomePage/welcome_v2.html", "_blank");
     } else if (details.reason == "update") {
@@ -57,8 +58,8 @@ chrome.runtime.onInstalled.addListener(function(details){
               chrome.storage.local.set({
                 Lectio_dontAskAgainNews: false
               });
-            if(thisVersion == "20182.1.4") {
-              chrome.storage.local.set({Lectio_standardBackground: true});
+            if(thisVersion == "20182.1.5") {
+              chrome.storage.local.set({Lectio_useRedirect: true});
             }
               // window.open("chrome-extension://"+chrome.runtime.id+"/update.html", "_blank");
         }
