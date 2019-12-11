@@ -1,6 +1,12 @@
 {
   "updates": [
     {
+      "version":"2.8.7.1",
+      "changelog": [
+        "<li> - Fixet en fejl hvor custom baggrund ikke virkede. </li><br>"
+      ]
+    },
+    {
       "version":"2.8.7",
       "changelog": [
         "<li> - Automatisk videresendelse til ens skole. </li><br>"
