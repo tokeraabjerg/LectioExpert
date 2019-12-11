@@ -4,7 +4,7 @@
  * @Email:  tokermc@hotmail.co
  * @Project: Lectio Expert
  * @Last modified by:
- * @Last modified time: 2019-12-09T19:40:21+01:00
+ * @Last modified time: 2019-12-11T01:14:49+01:00
  */
 
 console.time("Finished master.js in");
@@ -312,6 +312,7 @@ function mCheck () {
      'Lectio_hovedMenuPlus',
      'Lectio_antiAFK',
      'Lectio_zoomLevel',
+     'Lectio_standardBackground',
      'Lectio_customBackground',
      'Lectio_customBackgroundURL',
      'Lectio_customBackgroundOnlyDay',
@@ -342,25 +343,44 @@ function mCheck () {
            fChristmas();
            break;
      }
-     if(r.Lectio_customBackground != false &&
-        r.Lectio_customBackgroundURL != undefined &&
-         r.Lectio_customBackgroundURL != "" &&
-          r.Lectio_customBackgroundURL != "undefined" || r.Lectio_standardBackground != false) {c.l("i passed");
-            if(r.Lectio_standardBackground == false) {
-              if(r.Lectio_customBackgroundOnlyDay == true) {
-                if(!document.querySelector("#nightTheme")) {fCustomBackground(r.Lectio_customBackgroundURL);}
-              } else {
-                fCustomBackground(r.Lectio_customBackgroundURL);
-              }
-          } else {c.l("i passed v2");
-            if(document.querySelector("#nightTheme")) {
-              fCustomBackground("chrome-extension://"+chrome.runtime.id+"/images/bgNight.png", true); //night
-            } else {
-              fCustomBackground("chrome-extension://"+chrome.runtime.id+"/images/bg.jpg", true); //day
-            }
-          }
-     } else {c.l("i didnt pass");}
-
+     //basic conditions for custom background
+     if(r.Lectio_standardBackground != true && r.Lectio_customBackground == true &&//check if enabled
+        r.Lectio_customBackgroundURL != undefined && r.Lectio_customBackgroundURL != "" && r.Lectio_customBackgroundURL != "undefined"//check url
+       ) {
+      //check if only at day is enabled
+      if(r.Lectio_customBackgroundOnlyDay == true) {
+        //if true only apply when it's not night
+        if(!document.querySelector("#nightTheme")) {fCustomBackground(r.Lectio_customBackgroundURL);}
+      } else {
+        //else apply
+        fCustomBackground(r.Lectio_customBackgroundURL);
+      }
+      //else if standardbackground is true, apply that
+    } else if (r.Lectio_standardBackground == true) {
+      if(document.querySelector("#nightTheme")) {//check whether day or night should be applied
+         fCustomBackground("chrome-extension://"+chrome.runtime.id+"/images/bgNight.png", true); //night
+       } else {
+         fCustomBackground("chrome-extension://"+chrome.runtime.id+"/images/bg.jpg", true); //day
+       }
+    }
+     // if(r.Lectio_customBackground != false &&
+     //    r.Lectio_customBackgroundURL != undefined &&
+     //     r.Lectio_customBackgroundURL != "" &&
+     //      r.Lectio_customBackgroundURL != "undefined" || r.Lectio_standardBackground != false) {
+     //        if(r.Lectio_standardBackground == false) {
+     //          if(r.Lectio_customBackgroundOnlyDay == true) {
+     //            if(!document.querySelector("#nightTheme")) {fCustomBackground(r.Lectio_customBackgroundURL);}
+     //          } else {
+     //            fCustomBackground(r.Lectio_customBackgroundURL);
+     //          }
+     //      } else {
+     //        if(document.querySelector("#nightTheme")) {
+     //          fCustomBackground("chrome-extension://"+chrome.runtime.id+"/images/bgNight.png", true); //night
+     //        } else {
+     //          fCustomBackground("chrome-extension://"+chrome.runtime.id+"/images/bg.jpg", true); //day
+     //        }
+     //      }
+     // }
      //change icons
      if(r.Lectio_changeIcons != false) {fChangeIcons();}
 
@@ -405,7 +425,7 @@ function mCheck () {
           chrome.storage.local.get(["redirected"], function (r) {
             if(r.redirected == true) {
               chrome.storage.local.set({"redirected":false});
-              
+
             }
           });
           if((document.getElementsByClassName('island  mediumBlock mediumBlockHeight')[1]) != null) {
